@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Velvet Spa & Studio – Luxury Wellness in Bengaluru</title>
+  <meta name="description" content="Velvet Spa & Studio – Premium massage, herbal treatments, and holistic wellness in Yelahanka New Town, Bengaluru. Grand Opening – Up to 30% off!"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ===== PARTICLES BACKGROUND ===== -->
+  <div class="particles" id="particles"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">✦</span>
+      <span class="brand-name">Velvet</span>
+      <span class="brand-sub">SPA &amp; STUDIO</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#herbal">Herbal</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="book-btn" onclick="scrollToSection('contact')">Book Now</button>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <!-- ===== GRAND OPENING BANNER ===== -->
+  <div class="grand-opening-banner">
+    <span class="go-star">✦</span>
+    <span>GRAND OPENING — Special Offer: Up to <strong>30% OFF*</strong> on all treatments!</span>
+    <span class="go-star">✦</span>
+    <button class="go-close" onclick="this.parentElement.style.display='none'">✕</button>
+  </div>
+
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <img src="spa_hero_1783406661494.png" alt="Velvet Spa ambiance" class="hero-bg-img"/>
+    <div class="hero-content" id="heroContent">
+      <div class="hero-badge animate-in">✦ GRAND OPENING · SPECIAL OFFER ✦</div>
+      <h1 class="hero-title animate-in delay-1">
+        <span class="italic-text">Velvet</span><br/>
+        <span class="thin-text">SPA &amp; STUDIO</span>
+      </h1>
+      <p class="hero-tagline animate-in delay-2"><em>Relax.</em> Renew. Rejoice.</p>
+      <p class="hero-subtitle animate-in delay-2">Indulge in ultimate relaxation &amp; wellness at Bengaluru's new luxury destination.</p>
+
+      <!-- Grand Opening Offer Badge -->
+      <div class="go-badge animate-in delay-3">
+        <div class="go-badge-inner">
+          <span class="go-label">OPENING DISCOUNT</span>
+          <span class="go-label">UP TO</span>
+          <span class="go-percent">30%</span>
+          <span class="go-off">OFF<sup>*</sup></span>
+        </div>
+      </div>
+
+      <div class="hero-cta animate-in delay-3">
+        <button class="cta-primary" onclick="scrollToSection('services')">Explore Treatments</button>
+        <button class="cta-secondary" onclick="scrollToSection('contact')">Book a Session</button>
+      </div>
+
+      <!-- Feature Icons Row -->
+      <div class="hero-features animate-in delay-3">
+        <div class="hero-feat"><span class="feat-icon">🪷</span><span>Relax</span></div>
+        <div class="hero-feat"><span class="feat-icon">🙌</span><span>Renew</span></div>
+        <div class="hero-feat"><span class="feat-icon">🧘</span><span>Rejoice</span></div>
+        <div class="hero-feat"><span class="feat-icon">🌿</span><span>Premium Experience</span></div>
+        <div class="hero-feat"><span class="feat-icon">💆</span><span>Expert Therapists</span></div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about section-pad" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <div class="section-badge">Our Story</div>
+          <h2 class="section-title">Where Healing <em>Meets Harmony</em></h2>
+          <p class="body-text">Nestled in the heart of Yelahanka New Town, Bengaluru, <strong>Velvet Spa &amp; Studio</strong> is your sanctuary of serenity. We blend time-honoured Eastern traditions with contemporary wellness practices to offer you a truly transformative experience.</p>
+          <p class="body-text">Our skilled therapists are trained in the art of healing — from the flowing strokes of Swedish massage to the ancient wisdom of Traditional Thai dry therapy — every session is thoughtfully crafted for your well-being.</p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-num">11+</span>
+              <span class="stat-label">Treatments</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Natural Herbs</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">∞</span>
+              <span class="stat-label">Relaxation</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual reveal delay-1">
+          <div class="about-card">
+            <div class="card-icon">🌿</div>
+            <h3>Ancient Wisdom</h3>
+            <p>Rooted in centuries-old healing traditions from Thailand, Bali, and Ayurveda</p>
+          </div>
+          <div class="about-card">
+            <div class="card-icon">💎</div>
+            <h3>Premium Care</h3>
+            <p>Every treatment uses finest organic oils, herbal blends &amp; therapeutic stones</p>
+          </div>
+          <div class="about-card">
+            <div class="card-icon">🕊️</div>
+            <h3>Total Serenity</h3>
+            <p>A tranquil space designed to melt your stress from the very first breath</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="services section-pad" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Our Treatments</div>
+        <h2 class="section-title">Curated <em>Therapies</em> For You</h2>
+        <p class="section-desc">Navigate through our treatments. The featured card reveals its full story.</p>
+      </div>
+    </div>
+
+    <!-- Fan Carousel — full width, overflow hidden -->
+    <div class="fan-carousel-wrap">
+      <div class="fan-stage" id="fanStage">
+        <!-- Cards injected by JS -->
+      </div>
+
+      <!-- Nav arrows -->
+      <button class="fan-nav fan-prev" id="fanPrev" aria-label="Previous">&#8592;</button>
+      <button class="fan-nav fan-next" id="fanNext" aria-label="Next">&#8594;</button>
+
+      <!-- Dot indicators -->
+      <div class="fan-dots" id="fanDots"></div>
+    </div>
+
+    <!-- Detail panel below carousel -->
+    <div class="container">
+      <div class="fan-detail-panel" id="fanDetail">
+        <div class="fan-detail-inner">
+          <div class="fan-detail-emoji" id="fanDetailEmoji"></div>
+          <div class="fan-detail-body">
+            <h3 id="fanDetailTitle"></h3>
+            <span class="fan-detail-tag" id="fanDetailDuration"></span>
+            <p id="fanDetailDesc"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HERBAL SECTION ===== -->
+
+  <section class="herbal section-pad" id="herbal">
+    <div class="herbal-bg-overlay"></div>
+    <img src="herbal_section_1783406673222.png" alt="Herbal ingredients" class="herbal-bg-img"/>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge herbal-badge">Ancient Herbal Wisdom</div>
+        <h2 class="section-title">The Power of <em>Herbal Potlis</em></h2>
+        <p class="section-desc">A Herbal Potli (bundle) is a traditional Ayurvedic technique where therapeutic herbs are bundled in muslin cloth, heated in medicated oils, and gently pressed onto the body. Experience nature's pharmacy at its finest.</p>
+      </div>
+
+      <!-- Herbal Potli Feature -->
+      <div class="herbal-feature reveal">
+        <div class="herbal-potli-card">
+          <div class="potli-icon">🌿</div>
+          <h3>What is Herbal Potli?</h3>
+          <p>A <em>Potli</em> (meaning "small bundle" in Sanskrit) is made by tying a blend of medicated herbs, roots, and spices into a cloth pouch. This pouch is dipped in warm herbal oils and rhythmically stamped on the body, allowing the heat and herbs to penetrate deep into muscles and joints.</p>
+        </div>
+      </div>
+
+      <!-- Herbs Grid -->
+      <div class="herbs-grid">
+
+        <div class="herb-card reveal herb-card--eucalyptus">
+          <img
+            src="eucalyptus_sticker.png"
+            alt="Eucalyptus botanical illustration"
+            class="herb-sticker herb-sticker--eucalyptus"
+          />
+          <h4>Eucalyptus</h4>
+          <div class="herb-meaning"><strong>Meaning:</strong> "Well-covered" — referring to the protective cap on its flowers</div>
+          <div class="herb-section">
+            <strong>🌱 Uses</strong>
+            <ul>
+              <li>Opens nasal passages and airways</li>
+              <li>Relieves joint pain and arthritis</li>
+              <li>Natural antiseptic and antibacterial</li>
+            </ul>
+          </div>
+          <div class="herb-section">
+            <strong>✨ Benefits</strong>
+            <ul>
+              <li>Reduces inflammation and swelling</li>
+              <li>Eases respiratory congestion</li>
+              <li>Provides cooling sensation on skin</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="herb-card reveal delay-1 herb-card--turmeric">
+          <img
+            src="turmeric_sticker.png"
+            alt="Turmeric powder, roots and leaves"
+            class="herb-sticker herb-sticker--turmeric"
+          />
+          <h4>Turmeric (Haldi)</h4>
+          <div class="herb-meaning"><strong>Meaning:</strong> Sanskrit "Haridra" — "that which is yellow and dear to Hari (Lord Vishnu)"</div>
+          <div class="herb-section">
+            <strong>🌱 Uses</strong>
+            <ul>
+              <li>Anti-inflammatory poultice for joints</li>
+              <li>Skin brightening and tone correction</li>
+              <li>Relieves muscle aches after exercise</li>
+            </ul>
+          </div>
+          <div class="herb-section">
+            <strong>✨ Benefits</strong>
+            <ul>
+              <li>Curcumin reduces deep inflammation</li>
+              <li>Promotes radiant, glowing skin</li>
+              <li>Detoxifies and purifies the body</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="herb-card reveal delay-2 herb-card--ginger">
+          <img
+            src="ginger_sticker.png"
+            alt="Ginger root rhizome with leaves"
+            class="herb-sticker herb-sticker--ginger"
+          />
+          <h4>Ginger (Adrak)</h4>
+          <div class="herb-meaning"><strong>Meaning:</strong> Sanskrit "Shringavera" — "horn-root", referring to its knotted rhizome shape</div>
+          <div class="herb-section">
+            <strong>🌱 Uses</strong>
+            <ul>
+              <li>Warming treatment for stiff muscles</li>
+              <li>Stimulates blood circulation</li>
+              <li>Reduces nausea and digestive issues</li>
+            </ul>
+          </div>
+          <div class="herb-section">
+            <strong>✨ Benefits</strong>
+            <ul>
+              <li>Deep warming of muscle tissue</li>
+              <li>Boosts metabolism and detox</li>
+              <li>Relieves chronic pain naturally</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="herb-card reveal herb-card--lavender">
+          <img
+            src="lavender_sticker.png"
+            alt="Lavender botanical illustration"
+            class="herb-sticker herb-sticker--lavender"
+          />
+          <h4>Lavender</h4>
+          <div class="herb-meaning"><strong>Meaning:</strong> From Latin "Lavare" — "to wash", used by Romans in bathing rituals</div>
+          <div class="herb-section">
+            <strong>🌱 Uses</strong>
+            <ul>
+              <li>Promotes deep sleep and calm</li>
+              <li>Soothes burns and skin irritations</li>
+              <li>Reduces anxiety and headaches</li>
+            </ul>
+          </div>
+          <div class="herb-section">
+            <strong>✨ Benefits</strong>
+            <ul>
+              <li>Lowers cortisol (stress hormone)</li>
+              <li>Antimicrobial and antifungal</li>
+              <li>Regenerates and heals skin cells</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="herb-card reveal delay-1 herb-card--chamomile">
+          <img
+            src="chamomile_sticker.png"
+            alt="Chamomile flowers illustration"
+            class="herb-sticker herb-sticker--chamomile"
+          />
+          <h4>Chamomile</h4>
+          <div class="herb-meaning"><strong>Meaning:</strong> Greek "Khamaimelon" — "earth apple", named for its apple-like fragrance</div>
+          <div class="herb-section">
+            <strong>🌱 Uses</strong>
+            <ul>
+              <li>Soothes irritated and sensitive skin</li>
+              <li>Calms muscle spasms and cramps</li>
+              <li>Anti-inflammatory compress</li>
+            </ul>
+          </div>
+          <div class="herb-section">
+            <strong>✨ Benefits</strong>
+            <ul>
+              <li>Rich in antioxidant apigenin</li>
+              <li>Reduces puffiness and redness</li>
+              <li>Induces deep relaxation state</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="herb-card reveal delay-2 herb-card--rose">
+          <img
+            src="rose_sticker.png"
+            alt="Rose petals illustration"
+            class="herb-sticker herb-sticker--rose"
+          />
+          <h4>Rose Petals</h4>
+          <div class="herb-meaning"><strong>Meaning:</strong> Persian "Warda" — "flower", symbolising love, beauty and spiritual healing</div>
+          <div class="herb-section">
+            <strong>🌱 Uses</strong>
+            <ul>
+              <li>Hydrates and plumps dry skin</li>
+              <li>Tones and tightens skin naturally</li>
+              <li>Uplifts mood and reduces anxiety</li>
+            </ul>
+          </div>
+          <div class="herb-section">
+            <strong>✨ Benefits</strong>
+            <ul>
+              <li>High in Vitamin C and antioxidants</li>
+              <li>Balances skin's pH naturally</li>
+              <li>Aromatic therapy for emotional wellbeing</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Herbal Potli Benefits Banner -->
+      <div class="herbal-benefits reveal">
+        <h3>Benefits of Herbal Potli Massage</h3>
+        <div class="benefits-row">
+          <div class="benefit-item">
+            <div class="benefit-icon">🔥</div>
+            <span>Deep Muscle Relaxation</span>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🩹</div>
+            <span>Joint Pain Relief</span>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">💆</div>
+            <span>Stress Reduction</span>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🌀</div>
+            <span>Improved Circulation</span>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">✨</div>
+            <span>Radiant Skin</span>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">😴</div>
+            <span>Better Sleep</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact section-pad" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Visit Us</div>
+        <h2 class="section-title">Come, <em>Unwind</em> With Us</h2>
+        <p class="section-desc">We'd love to welcome you into our sanctuary. Walk in or call ahead to book your perfect treatment.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <div class="contact-icon">📍</div>
+          <h3>Find Us</h3>
+          <p>1st Floor, 283, MIG, 1st Phase,<br/>15th A Cross, Yelahanka New Town,<br/>Bengaluru, Karnataka – 560064</p>
+          <a href="https://maps.google.com/?q=Yelahanka+New+Town,+Bengaluru+560064" target="_blank" class="contact-link">Get Directions →</a>
+        </div>
+        <div class="contact-card reveal delay-1">
+          <div class="contact-icon">📞</div>
+          <h3>Call Us</h3>
+          <p>Ready to book your bliss? Reach our wellness consultants directly.</p>
+          <a href="tel:6366534680" class="contact-link">6366534680</a>
+          <a href="tel:6366534689" class="contact-link">6366534689</a>
+        </div>
+        <div class="contact-card reveal delay-2">
+          <div class="contact-icon">⏰</div>
+          <h3>Hours</h3>
+          <p>We are available throughout the week to provide you the best relaxation experience.</p>
+          <p class="hours-text">Mon – Sun<br/><strong>10:00 AM – 9:00 PM</strong></p>
+        </div>
+      </div>
+
+      <!-- Booking CTA -->
+      <div class="booking-cta reveal">
+        <h3>Ready to <em>Revive &amp; Rejoice</em>?</h3>
+        <p>Call us now to schedule your personalised wellness session</p>
+        <div class="cta-buttons">
+          <a href="tel:6366534680" class="cta-primary">📞 6366534680</a>
+          <a href="tel:6366534689" class="cta-secondary">📞 6366534689</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ANIMATED MAP SECTION ===== -->
+  <section class="map-section" id="location">
+    <div class="map-section-header reveal">
+      <div class="section-badge">Find Us</div>
+      <h2 class="section-title">We Are <em>Here For You</em></h2>
+      <p class="section-desc">Visit us at our serene retreat in Yelahanka New Town, Bengaluru.</p>
+    </div>
+
+    <div class="map-wrapper">
+      <!-- Google Maps iframe -->
+      <iframe
+        id="velvet-map"
+        src="https://maps.google.com/maps?q=13.1007,77.5963&z=15&output=embed&hl=en"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Velvet Spa location"
+        style="border:0; width:100%; height:100%;"
+      ></iframe>
+
+      <!-- Floating Info Card -->
+      <div class="map-info-card" id="mapCard">
+        <div class="map-card-top">
+          <div class="map-card-badge">NOW OPEN</div>
+          <div class="map-card-logo">
+            <span class="brand-icon">✦</span>
+            <span class="map-card-name">Velvet</span>
+          </div>
+          <p class="map-card-sub">SPA &amp; STUDIO</p>
+        </div>
+        <div class="map-card-body">
+          <div class="map-card-row">
+            <span class="map-card-icon">📍</span>
+            <div>
+              <strong>Address</strong>
+              <p>1st Floor, 283, MIG, 1st Phase,<br/>15th A Cross, Yelahanka New Town,<br/>Bengaluru, Karnataka – 560064</p>
+            </div>
+          </div>
+          <div class="map-card-row">
+            <span class="map-card-icon">📞</span>
+            <div>
+              <strong>Contact</strong>
+              <p><a href="tel:6366534680">6366534680</a> &nbsp;|&nbsp; <a href="tel:6366534689">6366534689</a></p>
+            </div>
+          </div>
+          <div class="map-card-row">
+            <span class="map-card-icon">⏰</span>
+            <div>
+              <strong>Hours</strong>
+              <p>Mon – Sun &nbsp; 10:00 AM – 9:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <a href="https://maps.google.com/?q=13.1007,77.5963" target="_blank" class="map-directions-btn">Get Directions →</a>
+      </div>
+
+      <!-- Decorative edge fades -->
+      <div class="map-fade map-fade-left"></div>
+      <div class="map-fade map-fade-right"></div>
+      <div class="map-fade map-fade-top"></div>
+      <div class="map-fade map-fade-bottom"></div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">
+        <span class="brand-icon">✦</span>
+        <span class="brand-name">Velvet</span>
+        <span class="brand-sub">SPA &amp; STUDIO</span>
+      </div>
+      <p class="footer-tagline">Relax. Renew. Rejoice. · Yelahanka New Town, Bengaluru, Karnataka</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#herbal">Herbal</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="footer-motto">— STEP IN. UNWIND. GLOW OUT. —</p>
+      <p class="footer-copy">© 2026 Velvet Spa &amp; Studio. All rights reserved. Crafted with 🌿 care.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
