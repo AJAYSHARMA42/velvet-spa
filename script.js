@@ -256,17 +256,17 @@ window.addEventListener('load', () => {
      ── FAN CAROUSEL ──
      ══════════════════════════════════════ */
   const THERAPIES = [
-    { emoji:'🙏', title:'Traditional Thai Dry',      duration:'60 – 90 min',      desc:'An ancient practice using rhythmic compressions and assisted stretches along energy lines of the body. Rooted in 2,500 years of Buddhist monastery healing, it restores flexibility, relieves deep muscle tension and promotes profound relaxation — entirely without oils.' },
-    { emoji:'🌸', title:'Aroma Massage',             duration:'60 – 90 min',      desc:'A gentle, flowing massage using hand-blended essential oils chosen for your specific needs. The aromatic properties calm the nervous system, uplift your mood and nourish the skin deeply — leaving you feeling silky, serene and renewed.' },
-    { emoji:'🌊', title:'Swedish Massage',           duration:'60 – 90 min',      desc:'The gold standard of relaxation massage. Long, gliding effleurage strokes combined with kneading and circular movements improve circulation, reduce stress hormones and ease muscle soreness — a timeless classic for complete body restoration.' },
-    { emoji:'💪', title:'Deep Tissue',               duration:'60 – 90 min',      desc:'Targeted, firm pressure therapy that reaches deeper layers of muscle and connective tissue. Ideal for chronic pain, sports injuries and stubborn knots that surface massages cannot address. Feel tension dissolve layer by layer.' },
-    { emoji:'🏝️', title:'Balinese Massage',          duration:'90 min',           desc:'A deeply relaxing full-body treatment combining acupressure, reflexology, and aromatherapy. Inspired by the sacred healing traditions of Bali to stimulate blood flow, ease tension, and restore a profound sense of calm.' },
-    { emoji:'👑', title:'VIP + Jacuzzi',             duration:'120 min · VIP',    desc:'Our most exclusive experience. Begin with a luxurious Jacuzzi soak to open pores and relax muscles, followed by a bespoke full-body massage with premium botanical oils. This is true indulgence — utterly redefined.' },
-    { emoji:'💑', title:'Couple Massage',            duration:'60 – 90 min',      desc:'Share the gift of relaxation with someone special. Side-by-side massages in a romantically appointed suite — perfect for anniversaries, date nights, or simply celebrating each other with the deepest care.' },
-    { emoji:'🔥', title:'Hot Stone Massage',         duration:'75 – 90 min',      desc:'Smooth, heated volcanic basalt stones are placed along energy points and used as massage tools. The penetrating heat melts deep muscular tension, improves circulation and induces a state of profound, restorative relaxation.' },
-    { emoji:'✨', title:'H&S or B&S Treatments',     duration:'30 – 45 min',      desc:'Specialised Head & Shoulders or Back & Shoulders massage focusing on your most common tension zones. Perfect for office workers, desk-bound professionals and anyone needing fast, targeted relief in their busiest moments.' },
-    { emoji:'👣', title:'Foot Reflexology',          duration:'45 – 60 min',      desc:'Based on the principle that reflex points in the feet correspond to every organ and system in the body. Precise thumb-walking techniques stimulate healing energy, reduce fatigue and restore full-body balance from the ground up.' },
-    { emoji:'🌿', title:'Herbal Potlis',             duration:'60 – 75 min',      desc:'A traditional Ayurvedic therapy where cloth pouches filled with therapeutic herbs, spices and roots are dipped in warm medicated oils and rhythmically pressed onto the body. Heat and healing botanicals penetrate deep into muscles and joints for transformative relief.' },
+    { emoji:'',   title:'Traditional Thai Dry',      duration:'60 – 90 min',      sticker:'',                             photo:'thai_massage_photo.jpg', desc:'An ancient practice using rhythmic compressions and assisted stretches along energy lines of the body. Rooted in 2,500 years of Buddhist monastery healing, it restores flexibility, relieves deep muscle tension and promotes profound relaxation — entirely without oils.' },
+    { emoji:'',   title:'Aroma Massage',             duration:'60 – 90 min',      sticker:'',                             photo:'aroma_massage_photo.jpg', desc:'A gentle, flowing massage using hand-blended essential oils chosen for your specific needs. The aromatic properties calm the nervous system, uplift your mood and nourish the skin deeply — leaving you feeling silky, serene and renewed.' },
+    { emoji:'',   title:'Swedish Massage',           duration:'60 – 90 min',      sticker:'',                             photo:'swedish_massage_photo.jpg', desc:'The gold standard of relaxation massage. Long, gliding effleurage strokes combined with kneading and circular movements improve circulation, reduce stress hormones and ease muscle soreness — a timeless classic for complete body restoration.' },
+    { emoji:'',   title:'Deep Tissue',               duration:'60 – 90 min',      sticker:'',                             photo:'deep_tissue_photo.jpg', desc:'Targeted, firm pressure therapy that reaches deeper layers of muscle and connective tissue. Ideal for chronic pain, sports injuries and stubborn knots that surface massages cannot address. Feel tension dissolve layer by layer.' },
+    { emoji:'',   title:'Balinese Massage',          duration:'90 min',           sticker:'',                             photo:'balinese_massage_photo.jpg', desc:'A deeply relaxing full-body treatment combining acupressure, reflexology, and aromatherapy. Inspired by the sacred healing traditions of Bali to stimulate blood flow, ease tension, and restore a profound sense of calm.' },
+    { emoji:'',   title:'VIP + Jacuzzi',             duration:'120 min · VIP',    sticker:'',                             photo:'jacuzzi_photo.jpg', desc:'Our most exclusive experience. Begin with a luxurious Jacuzzi soak to open pores and relax muscles, followed by a bespoke full-body massage with premium botanical oils. This is true indulgence — utterly redefined.' },
+    { emoji:'',   title:'Couple Massage',            duration:'60 – 90 min',      sticker:'',                             photo:'couple_massage_photo.jpg', desc:'Share the gift of relaxation with someone special. Side-by-side massages in a romantically appointed suite — perfect for anniversaries, date nights, or simply celebrating each other with the deepest care.' },
+    { emoji:'',   title:'Hot Stone Massage',         duration:'75 – 90 min',      sticker:'',                             photo:'hot_stone_photo.jpg', desc:'Smooth, heated volcanic basalt stones are placed along energy points and used as massage tools. The penetrating heat melts deep muscular tension, improves circulation and induces a state of profound, restorative relaxation.' },
+    { emoji:'',   title:'H&S or B&S Treatments',     duration:'30 – 45 min',      sticker:'',                             photo:'hs_treatment_photo.jpg', desc:'Specialised Head & Shoulders or Back & Shoulders massage focusing on your most common tension zones. Perfect for office workers, desk-bound professionals and anyone needing fast, targeted relief in their busiest moments.' },
+    { emoji:'',   title:'Foot Reflexology',          duration:'45 – 60 min',      sticker:'',                             photo:'foot_reflexology_photo.jpg', desc:'Based on the principle that reflex points in the feet correspond to every organ and system in the body. Precise thumb-walking techniques stimulate healing energy, reduce fatigue and restore full-body balance from the ground up.' },
+    { emoji:'',   title:'Herbal Potlis',             duration:'60 – 75 min',      sticker:'',                             photo:'herbal_potli_photo.jpg', desc:'A traditional Ayurvedic therapy where cloth pouches filled with therapeutic herbs, spices and roots are dipped in warm medicated oils and rhythmically pressed onto the body. Heat and healing botanicals penetrate deep into muscles and joints for transformative relief.' },
   ];
 
   const stage      = document.getElementById('fanStage');
@@ -278,6 +278,8 @@ window.addEventListener('load', () => {
   const detailTitle= document.getElementById('fanDetailTitle');
   const detailDur  = document.getElementById('fanDetailDuration');
   const detailDesc = document.getElementById('fanDetailDesc');
+  const detailPhotoWrap = document.getElementById('fanDetailPhotoWrap');
+  const detailPhotoImg  = document.getElementById('fanDetailPhoto');
 
   if (!stage) return; // guard if section not present
 
@@ -289,10 +291,12 @@ window.addEventListener('load', () => {
     const el = document.createElement('div');
     el.className = 'fan-card';
     el.innerHTML = `
+      ${t.sticker ? `<img src="${t.sticker}" alt="decoration" class="fan-card-sticker"/>` : ''}
       <div class="fan-card-top">
-        <span class="fan-card-emoji">${t.emoji}</span>
+        ${t.emoji ? `<span class="fan-card-emoji">${t.emoji}</span>` : '<span></span>'}
         <span class="fan-card-num">${String(i+1).padStart(2,'0')}</span>
       </div>
+      ${t.photo ? `<div class="fan-card-photo-wrap"><img src="${t.photo}" class="fan-card-photo" alt="${t.title}"/></div>` : ''}
       <h3 class="fan-card-title">${t.title}</h3>
       <span class="fan-card-duration">${t.duration}</span>
       <p class="fan-card-hint">✦ Tap to explore</p>`;
@@ -327,12 +331,25 @@ window.addEventListener('load', () => {
     const t = THERAPIES[current];
     // Re-trigger emoji animation
     detailEmoji.textContent = '';
-    requestAnimationFrame(() => {
-      detailEmoji.textContent = t.emoji;
-    });
+    if (t.emoji) {
+      detailEmoji.style.display = 'block';
+      requestAnimationFrame(() => {
+        detailEmoji.textContent = t.emoji;
+      });
+    } else {
+      detailEmoji.style.display = 'none';
+    }
     detailTitle.textContent = t.title;
     detailDur.textContent   = t.duration;
     detailDesc.textContent  = t.desc;
+    if (detailPhotoWrap && detailPhotoImg) {
+      if (t.photo) {
+        detailPhotoImg.src = t.photo;
+        detailPhotoWrap.style.display = 'block';
+      } else {
+        detailPhotoWrap.style.display = 'none';
+      }
+    }
     detailPanel.classList.add('open');
   }
 

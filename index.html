@@ -40,45 +40,94 @@
     <button class="go-close" onclick="this.parentElement.style.display='none'">✕</button>
   </div>
 
-  <section class="hero" id="home">
-    <div class="hero-overlay"></div>
-    <img src="spa_hero_1783406661494.png" alt="Velvet Spa ambiance" class="hero-bg-img"/>
-    <div class="hero-content" id="heroContent">
-      <div class="hero-badge animate-in">✦ GRAND OPENING · SPECIAL OFFER ✦</div>
-      <h1 class="hero-title animate-in delay-1">
-        <span class="italic-text">Velvet</span><br/>
-        <span class="thin-text">SPA &amp; STUDIO</span>
-      </h1>
-      <p class="hero-tagline animate-in delay-2"><em>Relax.</em> Renew. Rejoice.</p>
-      <p class="hero-subtitle animate-in delay-2">Indulge in ultimate relaxation &amp; wellness at Bengaluru's new luxury destination.</p>
+  <section class="hero ref-hero" id="home">
+    <div class="hero-bg-accent"></div>
+    <div class="container ref-hero-container">
+      <div class="ref-hero-grid">
+        
+        <!-- Left Column: Organic Wavy White Cards -->
+        <div class="ref-hero-left">
+          
+          <!-- Main Wavy Card -->
+          <div class="ref-card-main animate-in">
+            <div class="ref-badge">✦ Sanctuary of Serenity ✦</div>
+            <h1 class="ref-title">
+              Where Healing<br/>
+              <em>Meets Harmony</em>
+            </h1>
+            <p class="ref-tagline">Indulge in ultimate relaxation &amp; wellness at Bengaluru's premier luxury destination. Relax. Renew. Rejoice.</p>
+            <div class="ref-cta-wrap">
+              <button class="ref-pill-btn" onclick="scrollToSection('services')">
+                <span>Explore Treatments</span>
+                <span class="pill-arrow">→</span>
+              </button>
+              <button class="ref-link-btn" onclick="scrollToSection('contact')">Book a Session</button>
+            </div>
+          </div>
 
-      <!-- Grand Opening Offer Badge -->
-      <div class="go-badge animate-in delay-3">
-        <div class="go-badge-inner">
-          <span class="go-label">OPENING DISCOUNT</span>
-          <span class="go-label">UP TO</span>
-          <span class="go-percent">30%</span>
-          <span class="go-off">OFF<sup>*</sup></span>
+          <!-- Secondary Wavy Overlap Card -->
+          <div class="ref-card-secondary animate-in delay-2">
+            <p class="ref-desc">
+              Our skilled therapists are trained in the art of healing — from the gliding effleurage of Swedish massage to the rhythmic compressions of Traditional Thai dry therapy — every session is thoughtfully crafted for your body and spirit.
+            </p>
+            <div class="ref-stats-row">
+              <div class="ref-stat">
+                <strong>11+</strong>
+                <span>Treatments</span>
+              </div>
+              <div class="ref-stat-divider"></div>
+              <div class="ref-stat">
+                <strong>100%</strong>
+                <span>Natural Herbs</span>
+              </div>
+              <div class="ref-stat-divider"></div>
+              <div class="ref-stat">
+                <strong class="gold-highlight">30% OFF*</strong>
+                <span>Grand Opening</span>
+              </div>
+            </div>
+          </div>
+
         </div>
-      </div>
 
-      <div class="hero-cta animate-in delay-3">
-        <button class="cta-primary" onclick="scrollToSection('services')">Explore Treatments</button>
-        <button class="cta-secondary" onclick="scrollToSection('contact')">Book a Session</button>
-      </div>
+        <!-- Right Column: Layered Spa Visual Composition -->
+        <div class="ref-hero-right animate-in delay-1">
+          <div class="ref-visual-composition">
+            
+            <!-- Main Hero Image in Organic Blob Shape -->
+            <div class="ref-blob-wrap">
+              <img src="spa_hero_1783406661494.png" alt="Velvet Spa Ambiance" class="ref-main-img"/>
+            </div>
 
-      <!-- Feature Icons Row -->
-      <div class="hero-features animate-in delay-3">
-        <div class="hero-feat"><span class="feat-icon">🪷</span><span>Relax</span></div>
-        <div class="hero-feat"><span class="feat-icon">🙌</span><span>Renew</span></div>
-        <div class="hero-feat"><span class="feat-icon">🧘</span><span>Rejoice</span></div>
-        <div class="hero-feat"><span class="feat-icon">🌿</span><span>Premium Experience</span></div>
-        <div class="hero-feat"><span class="feat-icon">💆</span><span>Expert Therapists</span></div>
+            <!-- Floating Circle 1 (Top Right) -->
+            <div class="ref-float-circle ref-float--1">
+              <img src="aroma_massage_photo.jpg" alt="Aroma Oils"/>
+            </div>
+
+            <!-- Floating Circle 2 (Middle Left) -->
+            <div class="ref-float-circle ref-float--2">
+              <img src="hot_stone_photo.jpg" alt="Hot Stones"/>
+            </div>
+
+            <!-- Floating Offer Badge (Bottom Right) -->
+            <div class="ref-float-badge" onclick="scrollToSection('services')">
+              <div class="go-badge-inner" style="width: 115px; height: 115px;">
+                <span class="go-label" style="font-size: 0.52rem;">OPENING OFFER</span>
+                <span class="go-percent" style="font-size: 1.5rem;">30%</span>
+                <span class="go-off" style="font-size: 0.62rem;">OFF<sup>*</sup></span>
+              </div>
+            </div>
+
+            <!-- Floating Botanicals Tag (Top Left) -->
+            <div class="ref-float-tag">
+              <span class="tag-icon">🌿</span>
+              <span>100% Organic Oils</span>
+            </div>
+
+          </div>
+        </div>
+
       </div>
-    </div>
-    <div class="scroll-indicator">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
     </div>
   </section>
 
@@ -161,6 +210,9 @@
             <span class="fan-detail-tag" id="fanDetailDuration"></span>
             <p id="fanDetailDesc"></p>
           </div>
+          <div id="fanDetailPhotoWrap" class="fan-detail-photo-wrap" style="display: none;">
+            <img id="fanDetailPhoto" class="fan-detail-photo" src="" alt="Treatment photo"/>
+          </div>
         </div>
       </div>
     </div>
@@ -179,11 +231,14 @@
       </div>
 
       <!-- Herbal Potli Feature -->
-      <div class="herbal-feature reveal">
-        <div class="herbal-potli-card">
+      <div class="herbal-feature reveal" style="display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 4rem;">
+        <div class="herbal-potli-card" style="flex: 1; min-width: 300px; max-width: 600px; margin: 0;">
           <div class="potli-icon">🌿</div>
           <h3>What is Herbal Potli?</h3>
           <p>A <em>Potli</em> (meaning "small bundle" in Sanskrit) is made by tying a blend of medicated herbs, roots, and spices into a cloth pouch. This pouch is dipped in warm herbal oils and rhythmically stamped on the body, allowing the heat and herbs to penetrate deep into muscles and joints.</p>
+        </div>
+        <div class="herbal-photo-wrap" style="flex: 1; min-width: 300px; max-width: 480px; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.3); border: 2px solid rgba(196, 161, 90, 0.4);">
+          <img src="herbal_potli_photo.jpg" alt="Herbal Potlis Massage" style="width: 100%; height: 320px; object-fit: cover; display: block;"/>
         </div>
       </div>
 
@@ -350,80 +405,81 @@
 
       </div>
 
-      <!-- Herbal Potli Benefits Banner -->
-      <div class="herbal-benefits reveal">
-        <h3>Benefits of Herbal Potli Massage</h3>
-        <div class="benefits-row">
-          <div class="benefit-item">
-            <div class="benefit-icon">🔥</div>
-            <span>Deep Muscle Relaxation</span>
+      <!-- Herbal Potli Benefits Banner (Creative, Productive & Minimalist) -->
+      <div class="herbal-benefits-min reveal">
+        <div class="min-header">
+          <span class="min-badge">✦ THERAPEUTIC EFFICACY ✦</span>
+          <h3>How Herbal Potlis Heal Your Body</h3>
+          <p class="min-subtitle">A harmonious fusion of heat therapy, aromatherapy, and transdermal herbal absorption designed for profound, lasting restoration.</p>
+        </div>
+        
+        <div class="min-benefits-grid">
+          
+          <div class="min-benefit-card">
+            <div class="min-card-top">
+              <span class="min-num">01</span>
+              <div class="min-line"></div>
+              <span class="min-sym">✦</span>
+            </div>
+            <h4>Deep Myofascial Release</h4>
+            <p>Heat from warm herbal poultices penetrates deep into muscle layers, instantly melting chronic tension and stiffness without requiring harsh physical pressure.</p>
           </div>
-          <div class="benefit-item">
-            <div class="benefit-icon">🩹</div>
-            <span>Joint Pain Relief</span>
+
+          <div class="min-benefit-card">
+            <div class="min-card-top">
+              <span class="min-num">02</span>
+              <div class="min-line"></div>
+              <span class="min-sym">❖</span>
+            </div>
+            <h4>Joint Pain &amp; Inflammation Relief</h4>
+            <p>Medicated herbs like Turmeric and Ginger act transdermally to reduce swelling, lubricating stiff connective tissues and restoring fluid joint mobility.</p>
           </div>
-          <div class="benefit-item">
-            <div class="benefit-icon">💆</div>
-            <span>Stress Reduction</span>
+
+          <div class="min-benefit-card">
+            <div class="min-card-top">
+              <span class="min-num">03</span>
+              <div class="min-line"></div>
+              <span class="min-sym">✺</span>
+            </div>
+            <h4>Lymphatic &amp; Cellular Detox</h4>
+            <p>Rhythmic stamping compressions stimulate blood circulation and lymphatic drainage, flushing out metabolic toxins and accelerating tissue recovery.</p>
           </div>
-          <div class="benefit-item">
-            <div class="benefit-icon">🌀</div>
-            <span>Improved Circulation</span>
+
+          <div class="min-benefit-card">
+            <div class="min-card-top">
+              <span class="min-num">04</span>
+              <div class="min-line"></div>
+              <span class="min-sym">✧</span>
+            </div>
+            <h4>Nervous System Reset</h4>
+            <p>The combination of soothing warmth and aromatic botanicals activates the parasympathetic nervous system, lowering cortisol and calming mental fatigue.</p>
           </div>
-          <div class="benefit-item">
-            <div class="benefit-icon">✨</div>
-            <span>Radiant Skin</span>
+
+          <div class="min-benefit-card">
+            <div class="min-card-top">
+              <span class="min-num">05</span>
+              <div class="min-line"></div>
+              <span class="min-sym">◈</span>
+            </div>
+            <h4>Restorative Deep Sleep</h4>
+            <p>Complete physical decompressive release resets circadian rhythms, alleviating restlessness and guiding your mind and body into unbroken REM sleep.</p>
           </div>
-          <div class="benefit-item">
-            <div class="benefit-icon">😴</div>
-            <span>Better Sleep</span>
+
+          <div class="min-benefit-card">
+            <div class="min-card-top">
+              <span class="min-num">06</span>
+              <div class="min-line"></div>
+              <span class="min-sym">❀</span>
+            </div>
+            <h4>Skin Radiance &amp; Nourishment</h4>
+            <p>Warm medicated oils gently open skin pores, allowing herbal antioxidants and vital nutrients to deeply hydrate and illuminate your skin from within.</p>
           </div>
+
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTACT SECTION ===== -->
-  <section class="contact section-pad" id="contact">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-badge">Visit Us</div>
-        <h2 class="section-title">Come, <em>Unwind</em> With Us</h2>
-        <p class="section-desc">We'd love to welcome you into our sanctuary. Walk in or call ahead to book your perfect treatment.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-card reveal">
-          <div class="contact-icon">📍</div>
-          <h3>Find Us</h3>
-          <p>1st Floor, 283, MIG, 1st Phase,<br/>15th A Cross, Yelahanka New Town,<br/>Bengaluru, Karnataka – 560064</p>
-          <a href="https://maps.google.com/?q=Yelahanka+New+Town,+Bengaluru+560064" target="_blank" class="contact-link">Get Directions →</a>
-        </div>
-        <div class="contact-card reveal delay-1">
-          <div class="contact-icon">📞</div>
-          <h3>Call Us</h3>
-          <p>Ready to book your bliss? Reach our wellness consultants directly.</p>
-          <a href="tel:6366534680" class="contact-link">6366534680</a>
-          <a href="tel:6366534689" class="contact-link">6366534689</a>
-        </div>
-        <div class="contact-card reveal delay-2">
-          <div class="contact-icon">⏰</div>
-          <h3>Hours</h3>
-          <p>We are available throughout the week to provide you the best relaxation experience.</p>
-          <p class="hours-text">Mon – Sun<br/><strong>10:00 AM – 9:00 PM</strong></p>
-        </div>
-      </div>
-
-      <!-- Booking CTA -->
-      <div class="booking-cta reveal">
-        <h3>Ready to <em>Revive &amp; Rejoice</em>?</h3>
-        <p>Call us now to schedule your personalised wellness session</p>
-        <div class="cta-buttons">
-          <a href="tel:6366534680" class="cta-primary">📞 6366534680</a>
-          <a href="tel:6366534689" class="cta-secondary">📞 6366534689</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ===== ANIMATED MAP SECTION ===== -->
   <section class="map-section" id="location">
